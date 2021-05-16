@@ -1,4 +1,5 @@
 Purpose:
+
 This analyzer is associated with my Master's Thesis. It performs static analysis of
 programming exercises in Python and plots graphs to illustrate the findings.
 
