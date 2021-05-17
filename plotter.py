@@ -290,7 +290,7 @@ def plotter(dir):
 
 def main():
 
-#    abc_plot('datadump-analysis/metrics/mauno-plot/results','mauno-plot')
+    abc_plot('datadump-analysis/metrics/mauno-plot/results','mauno-plot')
 #    histo_plot('datadump-analysis/metrics/mauno-plot/results/',10,'cyclomatic_complexity','mauno-plot')
     
 #    plotter('datadump-analysis')
