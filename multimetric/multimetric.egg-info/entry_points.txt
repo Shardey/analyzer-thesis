@@ -1,0 +1,3 @@
+[console_scripts]
+multimetric = multimetric.__main__:main
+
