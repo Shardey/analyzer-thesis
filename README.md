@@ -1,3 +1,7 @@
+Author: Timo Rutanen
+
+The Multimetric package originally by Konrad Weihmann. Used according to the license.
+
 This project is associated with my Master's Thesis. It performs static analysis of
 programming exercises in Python and plots graphs to illustrate the findings.
 
