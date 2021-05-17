@@ -232,7 +232,7 @@ def create_dirs(dir,round_list):
 #
 
 def main():
-#    dir = 'Datadump'
+    dir = 'Datadump'
 #    directory_contents = os.listdir(dir)
 #    round_list = []
 #    for item in directory_contents: # List all the subdirectories. Each one contains one round of submissions
