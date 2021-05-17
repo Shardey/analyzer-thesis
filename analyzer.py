@@ -16,7 +16,7 @@ def main():
         print('Wrong number of arguments to Analyzer')
         print('Usage: Analyzer <directory>')
         print('<directory> is the path to the data directory')
-        print('All output will be in the directory <directory>-analysis>')
+        print('All output will be saved in the directory <directory>-analysis>')
         exit()
 
     dir = sys.argv[1]

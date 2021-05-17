@@ -84,12 +84,14 @@ def overall_metric_data(dir,metric):
     return np.round([maxes,means,medians,mins],2) #round to 2 decimals
 
 #####
-# distribution(metric)
+# distribution(metric,fie)
+#
+# metric: The metric the distribution array is to be created of
+# file  : Filename of the result group
 #
 # Creates a sorted array of the distribution of metric values over one file (the metric results 
 # of one round of submissions with X errors on one task)
 #
-# metric: The metric the distribution array is to be created of
 #
 
 def distribution(metric,file):
@@ -104,12 +106,12 @@ def distribution(metric,file):
 ######
 # histo_plot(dir,buckets,metric,round)
 #
-# Plots one big histogram, side by side for all errors for one round
-#
 # dir       : Directory containing the json data files (*datadump*-analysis/metrics/*round*/results/)
 # buckets   : How many buckets the histogram spreads the data in
 # metric    : Which metric is being drawn
 # round     : Name of the exercise round
+#
+# Plots one big histogram, side by side for all fail groups for one round
 
 def histo_plot(dir,buckets,metric,round):
     fig,ax = plt.subplots()
@@ -240,7 +242,8 @@ def abc_plot(dir,round):
 # plotter(dir)
 #
 # dir: base directory of the whole data result package (/directory-analysis/)
-# Plots everything in the whole Analyzer project
+#
+# Plots everything in the whole Analyzer project. If you need more/different plots, add them here
 # 
 
 def plotter(dir):
@@ -286,7 +289,6 @@ def plotter(dir):
 #
 
 def main():
-    plt.rcParams.update({'figure.max_open_warning': 0}) # Stop pyplot throwing warnings about too many open plots TODO: REMOVE THIS LINE, it's already in plotter()
 
 #    abc_plot('datadump-analysis/metrics/mauno-plot/results','mauno-plot')
 #    histo_plot('datadump-analysis/metrics/mauno-plot/results/',10,'cyclomatic_complexity','mauno-plot')

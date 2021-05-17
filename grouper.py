@@ -5,6 +5,8 @@ from openpyxl import Workbook,load_workbook
 
 ######
 # count_fails(str)
+#
+# str   : The target string of the unit test results
 # 
 # Counts how many 'errors' the string contains. The string is expectedly the unit test results string for a particular
 # submitted program, and can contain either 'E' 'F' or '.' as results. E and F are counted as errors and are treated similarly.
@@ -13,10 +15,14 @@ def count_fails(str):
     return str.count('E') + str.count('F')
 
 #####
-# nofails(string)
+# nofails(string,maxlen)
+#
+# str   : The target string of unit test results
+# maxlen: Maximum length of the string. used to see if the actual string is too short, meaning not all unit test results are in it.
 #
 # Used to check if there were any unit test fails in the test string
 # string: the unit test results. Contains 'E' 'F' and '.' for each unit test performed. Any 'E' and 'F' are test fails.
+# If the string is too short, that is also considered a fail
 
 
 def nofails(string,maxlen):
@@ -226,18 +232,18 @@ def create_dirs(dir,round_list):
 #
 
 def main():
-    dir = 'Datadump'
-    directory_contents = os.listdir(dir)
-    round_list = []
-    for item in directory_contents: # List all the subdirectories. Each one contains one round of submissions
-        if os.path.isdir(dir + '/' + item):
-            round_list.append(item)
+#    dir = 'Datadump'
+#    directory_contents = os.listdir(dir)
+#    round_list = []
+#    for item in directory_contents: # List all the subdirectories. Each one contains one round of submissions
+#        if os.path.isdir(dir + '/' + item):
+#            round_list.append(item)
 
-    create_dirs(dir,round_list) # Build the directory structure for printing the results
+#    create_dirs(dir,round_list) # Build the directory structure for printing the results
 
-    for i,round in enumerate(round_list): # Run the sorter for every round of exercises
-        sorted_rounds = grouper(dir,round,i)
-        sort_to_files(dir,sorted_rounds,round)
+#    for i,round in enumerate(round_list): # Run the sorter for every round of exercises
+#        sorted_rounds = grouper(dir,round,i)
+#        sort_to_files(dir,sorted_rounds,round)
 
 
 if __name__ == "__main__":
